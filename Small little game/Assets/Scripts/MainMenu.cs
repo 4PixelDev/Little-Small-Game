@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public static MainMenu instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
     public void LoadFirstLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
